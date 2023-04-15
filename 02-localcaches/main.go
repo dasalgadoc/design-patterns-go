@@ -26,6 +26,10 @@ func main() {
 	concurrentCache := NewConcurrentCache(GetFibonacci)
 	fmt.Println("Concurrent cache get")
 	concurrentGet(entrySlice, concurrentCache, writer)
+
+	libraryCacheMemory := NewLibraryCacheMemory(GetFibonacci)
+	fmt.Println("Library cache get")
+	concurrentGet(entrySlice, libraryCacheMemory, writer)
 }
 
 func sequentialGet(
